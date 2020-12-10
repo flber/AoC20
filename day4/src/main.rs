@@ -7,18 +7,7 @@ fn main() {
     let filename = &args[1];
 
     let contents = fs::read_to_string(filename).expect("Something went wrong reading the file");
-
     let passports: Vec<&str> = contents.as_str().split("\n\n").collect();
-
-    // let reg_vec = vec![
-        // "(byr:19[2-9][0-9]|byr:200[0-2])",
-        // "(iyr:201[0-9]|iyr:2020)",
-        // "(eyr:202[0-9]|eyr:2030)",
-        // "(hgt:1[5-8][0-9]cm|hgt:19[0-3]cm|hgt:59in|hgt:6[0-9]in|hgt:7[0-6]in)",
-        // "(hcl:#[0-9a-f]{6})",
-        // "(ecl:amb|ecl:blu|ecl:brn|ecl:gry|ecl:grn|ecl:hzl|ecl:oth)",
-        // "(pid:[0-9]{9}\\s)",
-    // ];
     
     let mut num_valid = 0;
 
